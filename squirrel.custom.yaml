@@ -3,6 +3,8 @@ patch:
   show_notifications_when: appropriate               # 状态通知，适当，也可设为全开（always）全关（never）
 
   style/color_scheme: system_blue               # 方案命名，不能有空格
+  style/horizontal: true                        # 候选窗横向显示
+  style/font_point: 18                          # 字号
   preset_color_schemes:
     system_blue:
       name: "huangyz0918"
@@ -14,11 +16,19 @@ patch:
       hilited_candidate_text_color: 0xEE6E00    #候选文字颜色
       hilited_candidate_back_color: 0xFFF0E4    #候选文字背景色
       comment_text_color: 0x999999              #拼音等提示文字颜色
-      horizontal: false                         #水平排列
+      # horizontal: false                         #水平排列
       inline_preedit: true                      #单行显示，false双行显示
       candidate_format: "%c\u2005%@ \u2005"     #用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
       corner_radius: 6                          #候选条圆角
       border_height: 0 
       border_width: 0                          
 
-  "app_options/com.runningwithcrayons.Alfred-3/ascii_mode": true
+  app_options:
+    com.googlecode.iterm2:
+      ascii_mode: true
+    com.jetbrains.datagrip:
+      ascii_mode: true
+    com.jetbrains.intellij:
+      ascii_mode: true
+    com.microsoft.VSCode:
+      ascii_mode: true
